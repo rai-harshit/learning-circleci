@@ -9,7 +9,7 @@ jobs:
   build:
     executor: my-local-executor
     steps:
-      - checkout
+      - checkout 
 
       - run:
           name: Install Dependencies
