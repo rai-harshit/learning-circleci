@@ -3,10 +3,10 @@ executors:
   my-local-executor:
     docker:
       - image: circleci/python:3.11
-    resource_class: rai-harshit/test
+    resource_class: rai-harshit/test-runner
 jobs:
   build:
-    executor: windows-local-runner 
+    executor: my-local-executor
     steps:
       - checkout 
 
