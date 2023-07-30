@@ -9,7 +9,10 @@ jobs:
     executor: my-local-executor
     steps:
       - checkout 
-
+      - run:
+          name: Change dir on Windows
+          command: |
+            cd 'C:\Program Files\CircleCI\'
       - run:
           name: Install Dependencies
           command: |
