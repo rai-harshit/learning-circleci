@@ -1,8 +1,13 @@
 version: 2.1
+executors:
+  my-local-executor:
+    docker:
+      - image: circleci/python:3.11
+    resource_class: rai-harshit/test-local-runners
 jobs:
   build:
     docker:
-      - image: circleci/python:3.11  # Use the desired Python version
+      - executor: my-local-executor
     steps:
       - checkout
 
