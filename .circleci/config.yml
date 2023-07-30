@@ -6,7 +6,7 @@ executors:
     resource_class: rai-harshit/local-runners
 jobs:
   build:
-    executor: lsst-macbook-runner
+    executor: my-local-executor
     steps:
       - checkout
 
