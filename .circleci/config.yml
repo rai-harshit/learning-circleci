@@ -9,7 +9,7 @@ jobs:
     executor: my-local-executor
     steps:
       - checkout
-    - run:
+      - run:
           name: Set Working Directory
           command: |
             mkdir -p ~/circleci
