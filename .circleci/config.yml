@@ -7,13 +7,10 @@ executors:
 jobs:
   build:
     executor: my-local-executor
+    working_directory: /Users/lsst/Desktop/circleci-local-runner
     steps:
       - checkout
-      - run:
-          name: Set Working Directory
-          command: |
-            mkdir -p ~/circleci
-            cd ~/circleci
+
       - run:
           name: Install Dependencies
           command: |
