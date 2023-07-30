@@ -3,7 +3,7 @@ executors:
   my-local-executor:
     docker:
       - image: circleci/python:3.11
-      - user : sudo
+        user : sudo
     resource_class: rai-harshit/local-runners
 jobs:
   build:
