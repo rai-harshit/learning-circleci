@@ -3,7 +3,7 @@ executors:
   my-local-executor:
     docker:
       - image: cimg/python:3.11
-    resource_class: rai-harshit/test-runner
+    resource_class: rai-harshit/on-prem-runners
 jobs:
   build:
     executor: my-local-executor
