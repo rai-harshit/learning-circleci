@@ -7,7 +7,7 @@ executors:
     resource_class: rai-harshit/local-runners
 jobs:
   build:
-    executor: windows-local-runner
+    executor: windows-local-runner 
     steps:
       - checkout 
 
