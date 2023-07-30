@@ -6,8 +6,7 @@ executors:
     resource_class: rai-harshit/test-local-runners
 jobs:
   build:
-    executor: my-local-executor
-    working_directory: /Users/lsst/Desktop/circleci-local-runner
+    executor: lsst-macbook-runner
     steps:
       - checkout
 
