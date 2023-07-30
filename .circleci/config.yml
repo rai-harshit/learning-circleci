@@ -4,13 +4,16 @@ executors:
     docker:
       - image: circleci/python:3.11
     resource_class: rai-harshit/test-local-runners
-    working_directory: ~/circleci
 jobs:
   build:
     executor: my-local-executor
     steps:
       - checkout
-
+    - run:
+          name: Set Working Directory
+          command: |
+            mkdir -p ~/circleci
+            cd ~/circleci
       - run:
           name: Install Dependencies
           command: |
