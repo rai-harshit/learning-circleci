@@ -3,7 +3,7 @@ executors:
   my-local-executor:
     docker:
       - image: circleci/python:3.11
-    resource_class: rai-harshit/test-local-runners
+    resource_class: rai-harshit/local-runners
 jobs:
   build:
     executor: lsst-macbook-runner
