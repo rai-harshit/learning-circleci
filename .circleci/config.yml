@@ -10,10 +10,6 @@ jobs:
     steps:
       - checkout 
       - run:
-          name: Change dir on Windows
-          command: |
-            cd 'C:\Program Files\CircleCI\'
-      - run:
           name: Install Dependencies
           command: |
             python -m venv venv
