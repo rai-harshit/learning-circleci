@@ -22,6 +22,24 @@ jobs:
           command: |
             . venv/bin/activate
             python -m unittest discover
+  test:
+    docker:
+      - image: circleci/python:3.11  # Use the desired Python version
+    steps:
+      - checkout
+
+      - run:
+          name: Install Dependencies
+          command: |
+            python -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+
+      - run:
+          name: Run Unit Tests
+          command: |
+            . venv/bin/activate
+            pytest
 
 workflows:
   version: 2
