@@ -4,6 +4,7 @@ executors:
     docker:
       - image: circleci/python:3.11
     resource_class: rai-harshit/test-local-runners
+    working_directory: ~/circleci
 jobs:
   build:
     executor: my-local-executor
